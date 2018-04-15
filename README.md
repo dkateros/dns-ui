@@ -1,27 +1,40 @@
-# DnsUi
+# dns-ui
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+## System setup
 
-## Development server
+### LTS nodejs
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+	sudo apt install nodejs
 
-## Code scaffolding
+	$ npm -v
+	5.6.0
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+	$ node -v
+	v8.11.1
 
-## Build
+Used [Visual Studio Code](https://code.visualstudio.com/) as an editor.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## New project
 
-## Running unit tests
+Start with a template angular project. Let's call it dns-ui.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ng new dns-ui
+    ng serve
+    
+Application is now live on http://localhost:4200 and updates automatically as resources change.
 
-## Running end-to-end tests
+### [Clarity](https://vmware.github.io/clarity)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Some pre-made components, css files and stuff. Just having a look. Used the 'Single Action' Datagrid component.
 
-## Further help
+    npm install @clr/icons --save
+    npm install @webcomponents/custom-elements@1.0.0 --save
+    npm install @clr/ui --save
+    npm install @clr/angular --save
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Import ClarityModule on app.module.ts
+
+### Angular
+
+The rest of the work is largely based on the ["Tour of Heroes" tutorial](https://angular.io/tutorial). Still a work in progress.

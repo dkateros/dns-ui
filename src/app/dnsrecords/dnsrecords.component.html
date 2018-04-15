@@ -1,0 +1,19 @@
+<clr-datagrid>
+  <clr-dg-column>id</clr-dg-column>
+  <clr-dg-column>hostname</clr-dg-column>
+  <clr-dg-column>ip address</clr-dg-column>
+
+  <clr-dg-row *ngFor="let dnsRecord of dnsRecords">
+    <clr-dg-action-overflow>
+        <button class="action-item" (click)="onEdit(dnsRecord)">Edit</button>
+        <button class="action-item" (click)="onDelete(dnsRecord.id)">Delete</button>
+    </clr-dg-action-overflow>
+    <clr-dg-cell>{{dnsRecord.id}}</clr-dg-cell>
+    <clr-dg-cell>{{dnsRecord.hostName}}</clr-dg-cell>
+    <clr-dg-cell>{{dnsRecord.ipAddress}}</clr-dg-cell>
+  </clr-dg-row>
+</clr-datagrid>
+
+<button class="btn btn-primary" (click)="onCreate()">Create</button>
+
+<app-dnsrecord-detail [dnsRecord]="selected"></app-dnsrecord-detail>

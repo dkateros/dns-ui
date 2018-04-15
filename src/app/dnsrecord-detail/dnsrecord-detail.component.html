@@ -1,0 +1,19 @@
+<div *ngIf="dnsRecord">
+
+  <div><span>id: </span>{{dnsRecord.id}}</div>
+
+  <div>
+    <label>IPv4 address:
+      <input [(ngModel)]="dnsRecord.ipAddress" placeholder="ipAddress"/>
+    </label>
+  </div>
+
+  <div>
+    <label>Hostname:
+        <input [(ngModel)]="dnsRecord.hostName" placeholder="hostName"/>
+    </label>
+  </div>
+
+  <button class="btn btn-primary" (click)="onSave()">Save</button>
+  <button class="btn" (click)="onCancel()">Cancel</button>
+</div>
